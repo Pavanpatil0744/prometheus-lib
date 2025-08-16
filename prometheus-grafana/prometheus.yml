@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s   # How often to scrape targets
+
+scrape_configs:
+  - job_name: "shopify-orders-api"
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ["shopify-orders-api-latest.onrender.com"]
